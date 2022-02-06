@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- usamos esto para llamar a la variable que se encuentra en nuestra ruta, con esto
+  accedemos al título de página por cada ruta visitada y la visualizamos acá -->
+  <title>
+    <%= titulo_pagina %>
+  </title>
+
+  <!-- con include y de esta forma importamos fragmentos de código, en lugar de hacerlo
+  largo y repetitivo hacemos esto -->
+  <%- include("partials/head") %>
+
+
+
+</head>
+
+<body>
+
+
+  <!-- HEADER -->
+  <%- include("partials/header") %>
+
+
+
+
+    <div class="home_bg">
+      <div class="card mb-3 card_style">
+
+
+
+        <!-- accedemos por medio de /img, la configuración para acceder
+        a los archivos estáticos está configurada en index.js, donde ya le decimos
+      donde se encuentra nuestro directorio, por lo que simplemente le vamos a especificar
+    la ruta así -->
+        <!-- <img src="/img/image1.jpg" class="card-img-top" alt="Home"> -->
+
+
+
+        <div>
+          <div>
+            <div class="alert alert_style  text-center" role="alert">
+              <i class="fab fa-android" style="font-size: 3em; color:white;"></i> <br />
+              <span style="color:wheat;">Title of the site current:</span> <b>
+                <%= titulo_pagina %>
+              </b>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="card-body">
+          <h1 class="card-title text-center" style="font-size: 3em; color:orangered;">You are at Home <i class="fas fa-home" style="color:white;"></i></h1>
+
+          <p class="card-text text-center" style="font-size: 1.8em; color:orange;">
+            What is Lorem Ipsum?
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.
+          </p>
+        </div>
+
+
+
+      </div>
+    </div>
+
+
+    <%- include("partials/footer") %>
+
+</body>
+
+</html>
